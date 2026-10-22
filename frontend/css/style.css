@@ -1,0 +1,138 @@
+:root {
+    --hh-navy: #14213d;
+    --hh-navy-2: #1f3563;
+    --hh-orange: #fb7a1e;
+    --hh-orange-dark: #e2650c;
+    --hh-bg: #f4f6fb;
+    --hh-card: #ffffff;
+    --hh-border: #e4e8f1;
+    --hh-text: #1d2433;
+    --hh-muted: #6b7488;
+}
+
+body {
+    background: var(--hh-bg);
+    color: var(--hh-text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main { flex: 1 0 auto; }
+a { color: var(--hh-navy-2); }
+
+/* Navbar */
+.hh-navbar { background: var(--hh-navy); box-shadow: 0 2px 12px rgba(20, 33, 61, .25); }
+.hh-navbar .nav-link { color: rgba(255, 255, 255, .75); font-weight: 500; border-radius: 8px; padding: .5rem .85rem; }
+.hh-navbar .nav-link:hover { color: #fff; }
+.hh-navbar .nav-link.active { color: #fff; background: rgba(255, 255, 255, .12); }
+.hh-navbar .navbar-toggler { border-color: rgba(255, 255, 255, .4); }
+.hh-navbar .navbar-toggler-icon { filter: invert(1); }
+.hh-brand { color: #fff !important; font-weight: 800; letter-spacing: .3px; display: flex; align-items: center; gap: .6rem; }
+.hh-logo {
+    width: 34px; height: 34px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center;
+    background: var(--hh-orange); color: #fff; font-size: 1.1rem;
+}
+.hh-nav-search { gap: .4rem; }
+.hh-nav-search .form-control { min-width: 220px; border: 0; }
+
+/* Buttons */
+.btn-hero { background: var(--hh-orange); border-color: var(--hh-orange); color: #fff; font-weight: 600; }
+.btn-hero:hover, .btn-hero:focus { background: var(--hh-orange-dark); border-color: var(--hh-orange-dark); color: #fff; }
+
+/* Hero */
+.hh-hero {
+    background: linear-gradient(120deg, var(--hh-navy) 0%, var(--hh-navy-2) 100%);
+    color: #fff; border-radius: 18px; padding: 2rem 2.2rem;
+    display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; align-items: center;
+}
+.hh-hero h1 { font-weight: 800; margin: .3rem 0; }
+.hh-hero p { margin: 0; color: rgba(255, 255, 255, .8); }
+.hh-eyebrow { text-transform: uppercase; font-size: .75rem; letter-spacing: 1.5px; color: var(--hh-orange); font-weight: 700; }
+
+/* Cards */
+.hh-card {
+    background: var(--hh-card); border: 1px solid var(--hh-border); border-radius: 16px;
+    padding: 1.5rem; box-shadow: 0 2px 8px rgba(20, 33, 61, .04);
+}
+.hh-card-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 1.1rem; }
+.hh-page-title { font-weight: 800; font-size: 1.7rem; }
+.hh-section { font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--hh-muted); font-weight: 700; margin-bottom: 1rem; }
+.hh-filter { padding: 1rem 1.25rem; }
+
+/* Stats */
+.hh-stat {
+    background: var(--hh-card); border: 1px solid var(--hh-border); border-radius: 16px; padding: 1.25rem 1.5rem;
+    display: flex; align-items: center; gap: 1rem; box-shadow: 0 2px 8px rgba(20, 33, 61, .04);
+}
+.hh-stat-icon {
+    width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; background: #e8eefc; color: var(--hh-navy-2);
+}
+.hh-stat-icon.alt { background: #fff0e3; color: var(--hh-orange-dark); }
+.hh-stat-icon.green { background: #e3f6ec; color: #1b8a52; }
+.hh-stat-value { font-size: 1.8rem; font-weight: 800; line-height: 1.1; }
+.hh-stat-label { color: var(--hh-muted); font-size: .85rem; }
+
+/* Progress bars */
+.hh-progress { height: 10px; border-radius: 99px; background: #edf0f7; }
+.hh-progress .progress-bar { border-radius: 99px; }
+
+/* Recent list */
+.hh-recent + .hh-recent { border-top: 1px solid var(--hh-border); margin-top: .75rem; padding-top: .75rem; }
+
+/* Avatar */
+.hh-avatar {
+    width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--hh-navy-2); color: #fff; font-weight: 700; font-size: .85rem;
+}
+.hh-avatar-lg { width: 96px; height: 96px; font-size: 2rem; background: var(--hh-orange); }
+
+/* Table */
+.hh-table thead th {
+    background: #f8f9fd; font-size: .75rem; text-transform: uppercase; letter-spacing: .8px;
+    color: var(--hh-muted); border-bottom: 1px solid var(--hh-border); padding: .9rem 1rem;
+}
+.hh-table tbody td { padding: .85rem 1rem; }
+.hh-table tbody tr:hover { background: #fafbff; }
+
+/* Department badges */
+.hh-badge { font-weight: 600; padding: .4em .75em; border-radius: 99px; }
+.badge.dept-engineering, .progress-bar.dept-engineering { background: #dbe7ff; color: #1d4ed8; }
+.badge.dept-hr, .progress-bar.dept-hr { background: #fde2f1; color: #be185d; }
+.badge.dept-finance, .progress-bar.dept-finance { background: #dcf5e7; color: #15803d; }
+.badge.dept-marketing, .progress-bar.dept-marketing { background: #ede4ff; color: #6d28d9; }
+.badge.dept-operations, .progress-bar.dept-operations { background: #e0f2fe; color: #0369a1; }
+.badge.dept-sales, .progress-bar.dept-sales { background: #ffe9d2; color: #c2570c; }
+.progress-bar.dept-engineering { background: #3b6df0; }
+.progress-bar.dept-hr { background: #e0489a; }
+.progress-bar.dept-finance { background: #22a35d; }
+.progress-bar.dept-marketing { background: #8b5cf6; }
+.progress-bar.dept-operations { background: #0ea5e9; }
+.progress-bar.dept-sales { background: var(--hh-orange); }
+
+/* Profile */
+.hh-dl dt { color: var(--hh-muted); font-weight: 600; padding: .65rem 0; }
+.hh-dl dd { padding: .65rem 0; margin: 0; border-bottom: 1px solid var(--hh-border); }
+.hh-dl dt { border-bottom: 1px solid var(--hh-border); }
+
+/* Forms */
+.form-label { font-weight: 600; font-size: .9rem; }
+.form-control:focus, .form-select:focus { border-color: var(--hh-orange); box-shadow: 0 0 0 .2rem rgba(251, 122, 30, .2); }
+
+/* Architecture page */
+.hh-layer {
+    width: 46px; height: 46px; border-radius: 12px; background: #fff0e3; color: var(--hh-orange-dark);
+    display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: .75rem;
+}
+
+/* Alerts, errors, footer */
+.hh-alert { border-radius: 12px; }
+.hh-error-code { font-size: 5rem; font-weight: 800; color: var(--hh-orange); line-height: 1; margin-bottom: 1rem; }
+.hh-footer { background: #fff; border-top: 1px solid var(--hh-border); padding: 1.1rem 0; margin-top: 2rem; font-size: .9rem; }
+
+@media (max-width: 575.98px) {
+    .hh-hero { padding: 1.5rem; }
+    .hh-nav-search .form-control { min-width: 0; flex: 1; }
+}
